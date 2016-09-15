@@ -23,6 +23,8 @@ public class mainSource {
 	@Path("/test")
 	public String test(@QueryParam("param") String param){
 		Logger.info(this, "param=" + param);
+		Logger.warn(this, "warn param=" + param);
+		Logger.error(this, "error param=" + param);
 
 		String s = new BaseRespDto(RespCodeEnum.OK, param).toString();
 		return s;
