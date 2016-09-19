@@ -32,8 +32,9 @@ public class mainSource {
 		Logger.info(this, "param=" + param);
 		Logger.warn(this, "warn param=" + param);
 		Logger.error(this, "error param=" + param);
+		throw new RuntimeException("test");
 
-		return new BaseRespDto(RespCodeEnum.OK, param).toString();
+//		return new BaseRespDto(RespCodeEnum.OK, param).toString();
 	}
 
 	@GET
